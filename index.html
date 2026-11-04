@@ -68,6 +68,59 @@
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
       }
+
+      /* Mobile screen fitting and cursive font un-cropping */
+      .font-script,
+      .text-gradient-sindoor,
+      .text-gradient-gold {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline-block;
+        padding-top: 0.16em;
+        padding-bottom: 0.22em;
+        padding-left: 0.08em;
+        padding-right: 0.08em;
+        margin-top: -0.16em;
+        margin-bottom: -0.22em;
+        overflow: visible !important;
+      }
+
+      @media (max-width: 640px) {
+        img.animate-sway {
+          max-height: 52px !important;
+          width: 100% !important;
+          object-fit: cover !important;
+          object-position: top center !important;
+        }
+
+        .hero-content-wrapper {
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: space-evenly !important;
+          align-items: center !important;
+          padding-top: 2px !important;
+          padding-bottom: 32px !important;
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+          flex: 1 1 auto !important;
+          min-height: 0 !important;
+        }
+
+        img.animate-float {
+          max-height: 25vh !important;
+          width: auto !important;
+          max-width: 195px !important;
+          object-fit: contain !important;
+          margin-top: 4px !important;
+          flex-shrink: 0 !important;
+        }
+
+        .pointer-events-none.absolute.-bottom-3.-left-4,
+        .pointer-events-none.absolute.-bottom-3.-right-4 {
+          width: 90px !important;
+          opacity: 0.85;
+        }
+      }
     </style>
   </head>
   <body>
