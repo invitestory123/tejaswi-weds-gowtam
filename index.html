@@ -99,7 +99,7 @@
           justify-content: space-evenly !important;
           align-items: center !important;
           padding-top: 2px !important;
-          padding-bottom: 32px !important;
+          padding-bottom: 48px !important;
           padding-left: 12px !important;
           padding-right: 12px !important;
           flex: 1 1 auto !important;
@@ -120,6 +120,48 @@
           width: 90px !important;
           opacity: 0.85;
         }
+      }
+
+      /* Scroll Down Button */
+      .scroll-down-btn {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 50;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        padding: 6px 16px;
+        border-radius: 9999px;
+        background: rgba(255, 249, 239, 0.95);
+        border: 1.5px solid rgba(232, 169, 60, 0.7);
+        box-shadow: 0 4px 16px rgba(143, 29, 58, 0.2), 0 0 10px rgba(232, 169, 60, 0.35);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .scroll-down-btn:hover {
+        transform: translateX(-50%) scale(1.06);
+        box-shadow: 0 6px 20px rgba(143, 29, 58, 0.28), 0 0 16px rgba(232, 169, 60, 0.5);
+      }
+      .scroll-down-btn:active {
+        transform: translateX(-50%) scale(0.95);
+      }
+      .scroll-down-btn span {
+        font-family: Cinzel, serif;
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        font-weight: 700;
+        color: #8f1d3a;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+      .scroll-down-btn svg {
+        color: #b5741b;
+        stroke-width: 2.5;
       }
     </style>
   </head>
